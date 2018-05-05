@@ -23,10 +23,15 @@ body {
 
 /*~~~~ About Text~~~~*/
 #about-text {
-    margin-top: 40%;
+    margin-top: 20%;
     /* position: relative;
     z-index: 999; */
     text-align: center;
+}
+
+#about-text img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #left-side h5 {
