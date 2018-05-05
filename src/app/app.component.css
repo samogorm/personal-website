@@ -1,5 +1,7 @@
 #app-container {
     height: 100vh;
+    display: flex; 
+    justify-content: space-between;
 }
 
 /*~~~~~~~~~~~~~~~~~~~
@@ -8,12 +10,11 @@
 
 #left-side {
     position: fixed;
-    width: 50%;
     height: 100vh;
     min-height: 600px;
-    float: left;
     background: #007BFF;
     text-align: center;
+    left: 0;
 }
 
 /*~~~~ About Text~~~~*/
@@ -38,6 +39,7 @@
     letter-spacing: 0.67px;
     text-align: center;
     line-height: 60px;
+    text-shadow: 0 2px 4px rgba(51,49,112,0.22);
 }
 
 .highlight-text {
@@ -55,7 +57,8 @@
     letter-spacing: 0.37px;
     background: #333170;
     border-radius: 100px;
-    padding: 15px 35px;
+    padding: 15px 45px;
+    box-shadow: 0 2px 4px 2px rgba(51,49,112,0.2);
 }
 
 /*~~~~ Social Icons ~~~~*/
@@ -71,4 +74,68 @@
 #social-icons li a {
     font-size: 26px;
     color: #FFFFFF;
+}
+
+#social-icons li a:hover {
+    color: #333170;
+}
+
+/*~~~~~~~~~~~~~~~~~~~
+ * Right Side 
+ * ~~~~~~~~~~~~~~~~~~*/
+ #right-side {
+    padding: 3rem 1rem;
+    position: absolute;
+    min-height: 600px;
+    right: 0;
+}
+
+#right-side h3 {
+    font-family: SFProText-Regular;
+    font-size: 26px;
+    color: #333170;
+    letter-spacing: 0.6px;
+}
+
+#right-side p {
+    font-family: SFProText-Regular;
+    font-size: 16px;
+    color: #616B7F;
+    letter-spacing: 0.33px;
+    line-height: 39px;
+}
+
+#skill-icons {
+    margin: 2rem 0;
+    margin-bottom: 3rem !important;
+}
+
+#skill-icons li {
+    display: inline-flex;
+    margin: 0 1rem;
+    font-size: 28px;
+    color: #616B7F;
+}
+
+#skill-icons li i:hover {
+    color: #007BFF;
+}
+
+#right-side h5 {
+    margin-top: 1rem;
+    font-family: SFProText-Bold;
+    font-size: 16px;
+    color: #007BFF;
+    letter-spacing: 0.33px;
+    line-height: 39px;
+}
+
+#right-side h6 {
+    font-style: italic;
+    color: #333170;
+}
+
+#intro, #skills, #education, #work {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
