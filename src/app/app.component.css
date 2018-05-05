@@ -142,7 +142,15 @@ body {
     color: #333170;
 }
 
-#intro, #skills, #education, #work {
+.fa-heart {
+    color: #FF4D4D;
+}
+
+#github p {
+    color: rgba(113, 126, 151, .8);
+}
+
+#intro, #skills, #education, #work, #github {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
