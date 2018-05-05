@@ -1,27 +1,27 @@
 #app-container {
+    width: 100%;
     height: 100vh;
-    display: flex; 
-    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~
  * Left Side 
  * ~~~~~~~~~~~~~~~~~~*/
-
 #left-side {
     position: fixed;
     height: 100vh;
     min-height: 600px;
     background: #007BFF;
     text-align: center;
-    left: 0;
+    float: left;
 }
 
 /*~~~~ About Text~~~~*/
 #about-text {
-    margin-top: 15rem;
-    position: relative;
-    z-index: 999;
+    margin-top: 40%;
+    /* position: relative;
+    z-index: 999; */
     text-align: center;
 }
 
@@ -88,10 +88,9 @@
  * Right Side 
  * ~~~~~~~~~~~~~~~~~~*/
  #right-side {
+    float: right;
     padding: 3rem 1rem;
-    position: absolute;
     min-height: 600px;
-    right: 0;
 }
 
 #right-side h3 {
@@ -142,4 +141,15 @@
 #intro, #skills, #education, #work {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 767px)
+{
+    #left-side {
+        width: 100%;
+        position: relative;
+    }
+    #right-side {
+        width: 100%;
+    }
 }
