@@ -59,21 +59,6 @@ body {
     opacity: 1 !important;
 }
 
-.btn-lit {
-    margin-top: 2rem;
-    font-weight: 400;
-    color: #FFFFFF;
-    letter-spacing: 0.37px;
-    background: #333170;
-    border-radius: 100px;
-    padding: 15px 45px;
-    box-shadow: 0 2px 4px 2px rgba(51,49,112,0.2);
-}
-
-.btn-lit:hover {
-    background: #1E1C54;
-}
-
 /*~~~~ Social Icons ~~~~*/
 #social-icons {
     margin-top: 2rem;
