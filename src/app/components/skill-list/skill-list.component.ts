@@ -10,43 +10,51 @@ export class SkillListComponent  {
   skills = [
     {
       title: 'HTML',
-      icon: 'fa-html5'
+      icon: 'fab fa-html5'
     },
     {
       title: 'CSS',
-      icon: 'fa-css3'
+      icon: 'fab fa-css3'
     },
     {
       title: 'Sass',
-      icon: 'fa-sass'
+      icon: 'fab fa-sass'
     },
     {
       title: 'JavaScript',
-      icon: 'fa-js-square'
+      icon: 'fab fa-js-square'
     },
     {
       title: 'Node JS',
-      icon: 'fa-node'
+      icon: 'fab fa-node'
     },
     {
       title: 'React + React Native',
-      icon: 'fa-react'
+      icon: 'fab fa-react'
     },
     {
       title: 'Angular 2+',
-      icon: 'fa-angular'
-    },
-    {
-      title: 'React + React Native',
-      icon: 'fa-react'
+      icon: 'fab fa-angular'
     },
     {
       title: 'PHP',
-      icon: 'fa-php'
+      icon: 'fab fa-php'
     },
     {
       title: 'Laravel',
-      icon: 'fa-laravel'
+      icon: 'fab fa-laravel'
+    },
+    {
+      title: 'Git',
+      icon: 'fab fa-git'
+    },
+    {
+      title: 'MySql',
+      icon: 'fas fa-database'
+    },
+    {
+      title: 'Unit Testing',
+      icon: 'fas fa-bug'
     }
   ];
 

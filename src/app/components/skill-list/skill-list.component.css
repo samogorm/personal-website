@@ -1,3 +1,8 @@
+#skill-icons {
+    margin: 2rem 0;
+    margin-bottom: 3rem !important;
+}
+
 #skill-icons li {
     display: inline-flex;
     margin: 1rem 1rem;

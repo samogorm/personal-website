@@ -1,0 +1,17 @@
+#social-icons {
+    margin-top: 2rem;
+}
+
+#social-icons li {
+    display: inline-flex;
+    margin: 0 1rem;
+}
+
+#social-icons li a {
+    font-size: 26px;
+    color: #FFFFFF;
+}
+
+#social-icons li a:hover {
+    color: #333170;
+}
