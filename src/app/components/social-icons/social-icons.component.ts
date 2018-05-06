@@ -31,6 +31,11 @@ export class SocialIconsComponent {
       title: 'GitHub',
       url: 'https://github.com/samogorm',
       icon: 'fab fa-github'
+    },
+    {
+      title: 'Medium',
+      url: 'https://medium.com/@samogorm',
+      icon: 'fab fa-medium'
     }
   ]
   constructor() { }

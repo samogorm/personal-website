@@ -16,14 +16,14 @@ export class AppComponent {
 
  @Output() workExperience = [
   {
-    date: 'Nov 2015 - July 2016',
-    location: 'Tubado',
-    title: 'Full-Stack Developer & Designer'
-  },
-  {
     date: 'Sept 2016 - Present',
     location: 'Suresite',
     title: 'Junior Application Developer'
+  },
+  {
+    date: 'Nov 2015 - July 2016',
+    location: 'Tubado',
+    title: 'Full-Stack Developer & Designer'
   }
  ];
 

@@ -55,6 +55,10 @@ export class SkillListComponent  {
     {
       title: 'Unit Testing',
       icon: 'fas fa-bug'
+    },
+    {
+      title: 'Wordpress Development',
+      icon: 'fab fa-wordpress'
     }
   ];
 
