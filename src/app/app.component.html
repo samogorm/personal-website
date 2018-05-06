@@ -2,7 +2,7 @@
     <div id="left-side" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="container">
         <div id="about-text" class="col-12">
-          <img src="https://samogorm.github.io/personal-website/assets/images/Pixel-Sam-Head.png" height="100px" alt="Pixelated version of Sam's head."/>
+          <app-image image="Pixel-Sam-Head.png" imageLabel="Pixelated version of Sam's head."></app-image>
             <h5>Hello, I'm Samantha O'Gorman.</h5>
           <h1>
             <span class="highlight-text">Full-Stack Developer</span> <br>
@@ -32,21 +32,14 @@
             </div>
             <div id="education" class="col-12">
               <h3>Education</h3>
-              <h5>July 2016</h5>
-              <h6 class="italic">University of Bolton</h6>
-              <p>Bachelor of Science, Computing & Website Development - 2:1</p>
+              <div *ngFor="let ed of education">
+                  <app-work-education date="{{ed.date}}" location="{{ed.location}}" title="{{ed.title}}"></app-work-education>
+              </div>
             </div>
             <div id="work" class="col-12">
                 <h3>Work</h3>
-                <div class="work">
-                    <h5>Sept 2016 - Present</h5>
-                    <h6 class="italic">Suresite</h6>
-                    <p>Junior Application Developer</p>
-                </div>
-                <div class="work">
-                    <h5>Nov 2015 - July 2016</h5>
-                    <h6 class="italic">Tubado</h6>
-                    <p>Full Stack Developer & Designer</p>
+                <div *ngFor="let work of workExperience">
+                    <app-work-education date="{{work.date}}" location="{{work.location}}" title="{{work.title}}"></app-work-education>
                 </div>
             </div>
             <div id="github" class="col-12 text-center">

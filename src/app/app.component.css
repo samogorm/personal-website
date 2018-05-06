@@ -83,20 +83,6 @@ body {
     line-height: 39px;
 }
 
-#right-side h5 {
-    margin-top: 1rem;
-    font-weight: 400;
-    font-size: 16px;
-    color: #007BFF;
-    letter-spacing: 0.33px;
-    line-height: 39px;
-}
-
-#right-side h6 {
-    font-style: italic;
-    color: #333170;
-}
-
 .fa-heart {
     color: #FF4D4D;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+ @Output() education = [
+   {
+     date: 'July 2016',
+     location: 'University of Bolton',
+     title: 'Bachelor of Science, Computing & Website Development - 2:1'
+   }
+ ];
+
+ @Output() workExperience = [
+  {
+    date: 'Nov 2015 - July 2016',
+    location: 'Tubado',
+    title: 'Full-Stack Developer & Designer'
+  },
+  {
+    date: 'Sept 2016 - Present',
+    location: 'Suresite',
+    title: 'Junior Application Developer'
+  }
+ ];
+
 }

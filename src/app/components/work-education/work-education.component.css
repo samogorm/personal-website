@@ -1,0 +1,20 @@
+.work h5 {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    color: #007BFF;
+    letter-spacing: 0.33px;
+    line-height: 39px;
+}
+.work p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #616B7F;
+    letter-spacing: 0.33px;
+    line-height: 39px;
+}
+
+.work h6 {
+    font-style: italic;
+    color: #333170;
+}
