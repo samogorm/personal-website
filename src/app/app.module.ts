@@ -8,6 +8,7 @@ import { SkillListComponent } from './components/skill-list/skill-list.component
 import { SocialIconsComponent } from './components/social-icons/social-icons.component';
 import { ImageComponent } from './components/image/image.component';
 import { WorkEducationComponent } from './components/work-education/work-education.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { WorkEducationComponent } from './components/work-education/work-educati
     SkillListComponent,
     SocialIconsComponent,
     ImageComponent,
-    WorkEducationComponent
+    WorkEducationComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule
