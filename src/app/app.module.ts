@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { IconComponent } from './components/icon/icon.component';
 import { ButtonComponent } from './components/button/button.component';
+import { SkillListComponent } from './components/skill-list/skill-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IconComponent,
-    ButtonComponent
+    ButtonComponent,
+    SkillListComponent
   ],
   imports: [
     BrowserModule

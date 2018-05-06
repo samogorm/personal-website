@@ -1,0 +1,10 @@
+#skill-icons li {
+    display: inline-flex;
+    margin: 1rem 1rem;
+    font-size: 28px;
+    color: #616B7F;
+}
+
+#skill-icons li i:hover {
+    color: #007BFF;
+}
