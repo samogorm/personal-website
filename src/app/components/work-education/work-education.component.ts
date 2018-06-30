@@ -9,7 +9,6 @@ export class WorkEducationComponent implements OnInit {
   @Input() date: string;
   @Input() location: string;
   @Input() title: string;
-  
   constructor() { }
 
   ngOnInit() {

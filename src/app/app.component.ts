@@ -18,7 +18,7 @@ export class AppComponent {
   {
     date: 'Sept 2016 - Present',
     location: 'Suresite',
-    title: 'Junior Application Developer'
+    title: 'Front-End Developer'
   },
   {
     date: 'Nov 2015 - July 2016',
