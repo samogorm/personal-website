@@ -1,0 +1,25 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  size?: {
+    height: number;
+    width: number;
+  };
+}
+
+const defaultSize = {
+  height: 32,
+  width: 32,
+};
+
+const { src, alt, size = defaultSize } = Astro.props;
+---
+<div class="rounded-lg bg-primary-500 h-14 w-14 flex items-center justify-center cursor-pointer transition-colors ease-in-out hover:bg-primary-600">
+  <img
+    src={ src }
+    alt={ alt }
+    height={ size.height }
+    width={ size.width }
+  />
+</div>
