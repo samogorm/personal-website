@@ -1,16 +1,23 @@
 ---
+import '@fontsource/inter';
+import '@fontsource/space-grotesk';
+
 import BaseHead from "src/components/BaseHead.astro";
 import Header from "src/components/Header.astro";
 import Footer from "src/components/Footer.astro";
 
 const { title, description } = Astro.props;
+
 ---
 <html lang="en">
 	<head>
-		<BaseHead title={ title } description={ description } />
+		<BaseHead
+			title={ title }
+			description={ description }
+		/>
 	</head>
 
-	<body class="bg-lightGrey-200 text-darkGrey-500 dark:bg-darkGrey-500 dark:text-lightGrey-500 mx-auto p-4 w-full sm:w-3/4 lg:w-2/4">
+	<body class="bg-slate-50 text-slate-600 dark:bg-slate-900 dark:text-slate-50 mx-auto p-4 w-full sm:w-3/4 lg:w-2/4">
 		<Header />
 		<main class="align-center">
 			<slot />
