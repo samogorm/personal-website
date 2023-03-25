@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon';
+
+const iconStyles = 'fill-lightGrey-500 h-5 w-5';
+
+const socialIcons = [
+  {
+    name: 'github',
+    href: 'https://github.com/samogorm',
+  },
+  {
+    name: 'instagram',
+    href: 'https://www.instagram.com/sam.ogorm',
+  },
+  {
+    name: 'linkedin-in',
+    href: 'https://www.linkedin.com/in/samantha-o-gorman-8b955284',
+  },
+]
+---
+<style lang="css">
+  a:hover > [astro-icon] {
+    fill: #78C7D0;
+  }
+</style>
+
+<ul class="flex gap-4 items-center">
+  { socialIcons.map(icon => (
+    <li>
+      <a href={ icon.href } target="_blank" class="cursor-pointer transition-all ease-in-out duration-200">
+        <Icon name={ icon.name } class={ iconStyles } />
+      </a>
+    </li>
+  ))}
+  <li>
+    <a href="mailto:samjogorman93@gmail.com" class="cursor-pointer transition-all ease-in-out duration-200">
+      <Icon name="paper-plane" class="fill-lightGrey-500 h-4 w-4" />
+    </a>
+  </li>
+</ul>

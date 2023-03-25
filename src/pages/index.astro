@@ -1,6 +1,7 @@
 ---
 import MainLayout from 'src/layouts/MainLayout.astro';
 import BlogPostCard from 'src/components/BlogPostCard.astro';
+import SocialIcons from 'src/components/SocialIcons.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from 'src/consts';
 import { getCollection } from 'astro:content';
 
@@ -28,9 +29,10 @@ const styles = {
 		<p class={ styles.paragraph }>
 			I have a passion for observability and building resilient, modular and scaleable software.
 		</p>
-		<p class={ styles.paragraph }>
+		<p class={ `${styles.paragraph} mb-5` }>
 			When I'm not at my computer, you'll find me walking or being bossed around by my Beagles.
 		</p>
+		<SocialIcons />
 	</div>
 	<h2 class="text-darkGrey-700 dark:text-white text-2xl font-mono font-black mb-4">
 		Posts
