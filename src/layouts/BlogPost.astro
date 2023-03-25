@@ -1,51 +1,59 @@
 ---
+import { SITE_TITLE } from 'src/consts';
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import MainLayout from 'src/layouts/MainLayout.astro';
+import Tag from 'src/components/Tag.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroAlt, readTime, category, heroSource } = Astro.props;
 ---
-
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
-
-	<body>
-		<Header />
-		<main>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
-						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout
+	title={ `${SITE_TITLE} - ${title}` }
+	description={ description }
+>
+	<article class="flex flex-col prose prose-primary dark:prose-invert">
+		<a href="/" class="hover:text-primary-600 transition-colors ease-in-out duration-200 mb-6">
+			Back to home
+		</a>
+		<div>
+			<Tag
+				text={ category }
+			/>
+			<h1 class="text-2xl md:text-4xl font-mono font-black my-3">
+				{ title }
+			</h1>
+			<div class="flex justify-between items-center text-xs dark:text-lightGrey-400">
+				<span>
+					{ readTime }
+				</span>
+				<span class="text-right">
+					<FormattedDate date={ pubDate } />
+					{
+						updatedDate && (
+							<div class="italic text-lightGrey-600">
+								Last updated on <FormattedDate date={ updatedDate } />
+							</div>
+						)
+					}
+				</span>
+			</div>
+			{ heroImage && (
+				<figure class="mb-6 text-center">
+					<img
+						width={ 720 }
+						height={ 360 }
+						src={ heroImage }
+						alt={ heroAlt }
+						class="rounded"
+					/>
+					<figcaption class="italic text-sm dark:text-lightGrey-400 mt-1">
+						Image from: { heroSource }
+					</figcaption>
+				</figure>
+			) }
+		</div>
+		<slot />
+	</article>
+</MainLayout>

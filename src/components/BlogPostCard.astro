@@ -12,7 +12,6 @@ interface Props {
 
 const { title, slug, date, tag, description } = Astro.props;
 ---
-
 <a href={`/posts/${slug}/`} class="bg-lightGrey-200 border-lightGrey-300 dark:bg-darkGrey-400 dark:border-darkGrey-300 p-4 border rounded flex flex-col hover:border-darkGrey-200">
 	<div class="flex justify-between mb-2">
 		<Tag text={ tag } />
@@ -20,9 +19,9 @@ const { title, slug, date, tag, description } = Astro.props;
 			<FormattedDate date={ date } />
 		</span>
 	</div>
-	<h4 class="font-mono text-xl dark:text-white">
+	<h3 class="font-mono text-xl dark:text-white">
 		{ title }
-	</h4>
+	</h3>
 	<p class="text-sm dark:text-lightGrey-400">
 		{ description }
 	</p>
