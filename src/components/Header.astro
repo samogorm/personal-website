@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import Avatar from './Avatar.astro';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, SITE_SUBTITLE } from 'src/consts';
 ---
 
 <header class="py-4 px-0 flex justify-between items-center">
@@ -12,10 +12,10 @@ import { SITE_TITLE } from '../consts';
 		/>
 		<span class="ml-2 flex flex-col">
 			<span class="text-lg font-mono font-black leading-5">
-				Sam O'Gorman
+				{ SITE_TITLE }
 			</span>
 			<span class="text-xs text-darkGrey-100 dark:text-lightGrey-500">
-				Software Engineer
+				{ SITE_SUBTITLE }
 			</span>
 		</span>
 	</HeaderLink>

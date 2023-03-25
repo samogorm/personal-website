@@ -2,7 +2,7 @@
 import MainLayout from 'src/layouts/MainLayout.astro';
 import BlogPostCard from 'src/components/BlogPostCard.astro';
 import SocialIcons from 'src/components/SocialIcons.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from 'src/consts';
+import { SITE_TITLE, SITE_DESCRIPTION, HOMEPAGE_CONTENT } from 'src/consts';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -21,23 +21,21 @@ const styles = {
 >
 	<div class="mt-10 mb-12">
 		<h1 class="text-darkGrey-700 dark:text-white text-3xl md:text-4xl lg:text-5xl font-mono font-black mb-6">
-			Hey, I'm a Software Engineer
+			{ HOMEPAGE_CONTENT.title }
 		</h1>
-		<p class={ styles.paragraph }>
-			Since 2016, I've gained experience across most aspects of the application lifecycle, including frontend, backend, and agile ways of working.
-		</p>
-		<p class={ styles.paragraph }>
-			I have a passion for observability and building resilient, modular and scaleable software.
-		</p>
-		<p class={ `${styles.paragraph} mb-5` }>
-			When I'm not at my computer, you'll find me walking or being bossed around by my Beagles.
-		</p>
-		<SocialIcons />
+		{ HOMEPAGE_CONTENT.text.map(text => (
+			<p class={ styles.paragraph }>
+				{ text }
+			</p>
+		)) }
+		<div class="mt-5">
+			<SocialIcons />
+		</div>
 	</div>
 	<h2 class="text-darkGrey-700 dark:text-white text-2xl font-mono font-black mb-4">
 		Posts
 	</h2>
-	<ul class="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-12">
+	<ul class="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-24">
 		{
 			posts.map((post) => (
 				<li>
