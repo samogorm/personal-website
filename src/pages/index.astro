@@ -35,7 +35,7 @@ const styles = {
 	<h2 class="text-darkGrey-700 dark:text-white text-2xl font-mono font-black mb-4">
 		Posts
 	</h2>
-	<ul class="flex flex-col gap-5 mb-12">
+	<ul class="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-12">
 		{
 			posts.map((post) => (
 				<li>
@@ -43,6 +43,8 @@ const styles = {
 						title={ post.data.title }
 						slug={ post.slug }
 						date={ post.data.pubDate }
+						tag={ post.data.category }
+						description={ post.data.description }
 					/>
 				</li>
 			))

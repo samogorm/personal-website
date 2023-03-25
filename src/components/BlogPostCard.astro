@@ -1,18 +1,29 @@
 ---
 import FormattedDate from 'src/components/FormattedDate.astro';
+import Tag from 'src/components/Tag.astro';
 
 interface Props {
 	slug: string;
 	title: string;
 	date: Date;
+	tag: string;
+	description: string;
 }
 
-const { title, slug, date } = Astro.props;
+const { title, slug, date, tag, description } = Astro.props;
 ---
 
 <a href={`/posts/${slug}/`} class="bg-lightGrey-200 border-lightGrey-300 dark:bg-darkGrey-400 dark:border-darkGrey-300 p-4 border rounded flex flex-col hover:border-darkGrey-200">
-	{ title }
-	<div class="flex justify-between">
-		<FormattedDate date={ date } />
+	<div class="flex justify-between mb-2">
+		<Tag text={ tag } />
+		<span class="text-xs dark:text-lightGrey-300">
+			<FormattedDate date={ date } />
+		</span>
 	</div>
+	<h4 class="font-mono text-xl dark:text-white">
+		{ title }
+	</h4>
+	<p class="text-sm dark:text-lightGrey-400">
+		{ description }
+	</p>
 </a>
