@@ -10,7 +10,7 @@ interface Props {
 const { title, slug, date } = Astro.props;
 ---
 
-<a href={`/blog/${slug}/`} class="bg-lightGrey-200 border-lightGrey-300 dark:bg-darkGrey-400 dark:border-darkGrey-300 p-4 border rounded flex flex-col hover:border-darkGrey-200">
+<a href={`/posts/${slug}/`} class="bg-lightGrey-200 border-lightGrey-300 dark:bg-darkGrey-400 dark:border-darkGrey-300 p-4 border rounded flex flex-col hover:border-darkGrey-200">
 	{ title }
 	<div class="flex justify-between">
 		<FormattedDate date={ date } />
