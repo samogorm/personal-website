@@ -84,7 +84,8 @@ module.exports = {
             },
 						'h2': {
 							marginTop: '1.5rem',
-              marginBottom: '0.75rem'
+              marginBottom: '0.75rem',
+							fontFamily: 'Space Grotesk',
             },
           },
         },
