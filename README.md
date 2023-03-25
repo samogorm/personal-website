@@ -2,6 +2,10 @@
 
 Hey there, this repo contains my personal website which you can visit here: [samogorman.uk](https://www.samogorman.uk/).
 
+|Dark|Light|
+|-|-|
+|![image](./screenshots/site-screenshot-dark.png)|![image](./screenshots/site-screenshot-light.png)|
+
 ## 💪🏻 Motivations
 
 I wanted a minimal website that's easy to maintain. My old website was built with [NextJS](https://nextjs.org/) and used [Prismic](https://prismic.io/) as the CMS, which are both awesome.
