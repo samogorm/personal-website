@@ -7,7 +7,6 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// TODO use a better image
 const { title, description, image = '/assets/avatar.png' } = Astro.props;
 ---
 

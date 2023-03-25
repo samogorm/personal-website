@@ -1,16 +1,51 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from 'src/consts';
 import MainLayout from 'src/layouts/MainLayout.astro';
+import BlogPostCard from 'src/components/BlogPostCard.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from 'src/consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+const styles = {
+	highlightText: 'text-primary-500',
+	paragraph: 'text-darkGrey-500 dark:text-lightGrey-300 mb-2'
+}
 ---
 
 <MainLayout
 	title={ `${SITE_TITLE} | Home` }
 	description={ SITE_DESCRIPTION }
 >
-	<div class="text-center">
-		<p class="text-slate-400 dark:text-slate-400 mb-2">👋🏻 Hey, I'm Sam</p>
-		<h1 class="text-2xl md:text-4xl font-mono font-extrabold">
-			A <span class="text-primary-500">Software Engineer</span> with a passion for <span class="text-primary-500">observability</span> and <span class="text-primary-500">building resilient products</span> that scale
+	<div class="mt-10 mb-12">
+		<h1 class="text-darkGrey-700 dark:text-white text-3xl md:text-4xl lg:text-5xl font-mono font-black mb-6">
+			Hey, I'm a Software Engineer
 		</h1>
+		<p class={ styles.paragraph }>
+			Since 2016, I've gained experience across most aspects of the application lifecycle, including frontend, backend, and agile ways of working.
+		</p>
+		<p class={ styles.paragraph }>
+			I have a passion for <span class={ styles.highlightText }>observability</span> and building <span class={ styles.highlightText }>resilient, scaleable software.</span>
+		</p>
+		<p class={ styles.paragraph }>
+			When I'm not at my computer, you'll find me walking or being bossed around by my Beagles.
+		</p>
 	</div>
+	<h2 class="text-darkGrey-700 dark:text-white text-2xl font-mono font-black mb-4">
+		Posts
+	</h2>
+	<ul class="flex flex-col gap-5 mb-12">
+		{
+			posts.map((post) => (
+				<li>
+					<BlogPostCard
+						title={ post.data.title }
+						slug={ post.slug }
+						date={ post.data.pubDate }
+					/>
+				</li>
+			))
+		}
+	</ul>
 </MainLayout>

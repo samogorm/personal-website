@@ -1,13 +1,13 @@
 ---
+import { SITE_TITLE } from '../consts';
+
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="p-4 flex flex-col text-center text-slate-500 dark:text-slate-300 absolute bottom-0 left-0 w-full">
+	<span>
+		Built with <a href="https://astro.build" target="_blank" class="text-primary-500 font-semibold">Astro</a> and hosted on <a href="https://vercel.com" target="_blank" class="text-primary-500 font-semibold">Vercel</a>
+	</span>
+	<p class="text-sm">&copy; { today.getFullYear() } { SITE_TITLE }</p>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
+
