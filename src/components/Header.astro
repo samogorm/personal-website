@@ -5,13 +5,18 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header class="py-4 px-0 flex justify-between items-center">
-	<HeaderLink href="/">
+	<HeaderLink href="/" class="flex items-center">
 		<Avatar
 			src="assets/avatar.png"
 			alt={ `${SITE_TITLE}'s Memoji with short, brown hair, a freckled face and silver framed glasses.'` }
 		/>
+		<span class="ml-2 flex flex-col">
+			<span class="text-lg font-mono font-black leading-5">
+				Sam O'Gorman
+			</span>
+			<span class="text-xs text-darkGrey-100 dark:text-lightGrey-500">
+				Software Engineer
+			</span>
+		</span>
 	</HeaderLink>
-	<nav>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-	</nav>
 </header>
